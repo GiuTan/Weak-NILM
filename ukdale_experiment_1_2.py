@@ -12,7 +12,7 @@ from datetime import datetime
 import argparse
 
 
-parser = argparse.ArgumentParser(description="UK-DALE synthetic dataset creation")
+parser = argparse.ArgumentParser(description="UKDALE experiments 1 and 2")
 
 parser.add_argument("--quantity_1", type=int, default=45581, help="Number of bags in UKDALE house 1")
 parser.add_argument("--quantity_2", type=int, default=3271, help="Number of bags in UKDALE house 2")
