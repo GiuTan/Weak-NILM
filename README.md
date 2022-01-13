@@ -29,7 +29,9 @@ Data will be created with both types of label. Quantity of strong and weak annot
 
 Specifically, for mixed training experiment there is the possibility to set also the testing dataset desired, choosing between REFIT and UK-DALE. 
 
-Required packages to prepare the enviroment are listed in environment.yml file. 
+Required packages to prepare the enviroment are listed in environment.yml file.
+
+Structure for the linear softmax pooling layer is inspired by https://github.com/marl/autopool.
 
 
 
