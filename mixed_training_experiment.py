@@ -199,10 +199,10 @@ if __name__ == '__main__':
         
 	houses = [4, 9, 15]
 
-	# number of bags in each house can change based on the created dataset 
+	# number of bags in each house can change based on the dataset composition  
         for k in houses:
 
-            quant = [0, 0, 0, 0, 12000, 0, 0, 0, 0, 9000, 0, 0, 0, 0, 0, 4000, 0, 0, 0, 0, 0, 0, 0]
+            quant = [0, 0, 0, 0, 12000, 0, 0, 0, 0, 9000, 0, 0, 0, 0, 0, 1500, 0, 0, 0, 0, 0, 0, 0]
 
             error_vectors = 0
             print("Aggregate Loading")
