@@ -2,10 +2,10 @@ import numpy as np
 import pandas as pd
 from matplotlib import pyplot as plt 
 
-file_agg_path = '/raid/users/eprincipi/clean_refit/dataset_weak/aggregate_data_noised/'
+file_agg_path = '../dataset_weak/aggregate_data_noised/'
 labels_path = '/raid/users/eprincipi/clean_refit/dataset_weak/labels/'
-destination_agg_resample_path = '/raid/users/eprincipi/resampled_agg_REFIT_test/'
-destination_labels_resample_path = '/raid/users/eprincipi/resampled_labels_REFIT_test/'
+destination_agg_resample_path = '..dataset_weak/resampled_agg_REFIT_test/'
+destination_labels_resample_path = '..dataset_weak/resampled_labels_REFIT_test/'
 k = 4
 quantity = 12000
 for i in range(quantity):
