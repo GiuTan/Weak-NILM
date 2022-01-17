@@ -5,13 +5,14 @@ The implemented network is a CRNN, for which the architecture refers to [].
 Both strongly and weakly labeled data are generated from two real-world benchmark datasets: REFIT and UK-DALE.
 
 Two experiments are proposed:
-- one related to UK-DALE where it is possible to vary the percentage of bags with strong annotations as well as weak annotations
-- one related to mixed dataset where the network can be trained with a percentage of strong annotations from UK-DALE and a quantity of weak annotations from REFIT, testing on both dataset the performance of the network. 
+- one based on UK-DALE data where it is possible to vary the percentage of bags with strong annotations as well as weak annotations
+- one based on mixed dataset where the network can be trained with a percentage of strong annotations from UK-DALE and a quantity of weak annotations from REFIT, testing on both datasets the performance of the network. 
 
-In dataset_creation code for synthetic aggregates creation is available both for UK-DALE and REFIT. The other modules have to be used to create noised aggregate vectors, adding noise to synthetic vectors.
+In dataset_creation.py code for synthetic aggregates creation is available for both UK-DALE and REFIT. Modules noise_extraction.py and noised_aggregate_creation.py have to be used to create noised aggregate vectors, adding noise to synthetic vectors.
 Appliances taken into consideration are kettle, microwave, fridge, washing machine and dishwasher.
 
-Data will be created with both types of label. Quantity of strong and weak annotations can be defined in the experiment modules. In fact, in ukdale_experiment_1_2 and mixed_training_experiment can be set:
+Data will be created with both types of label. Appliance states are set to 1 in strong annotations when the specific appliance is ON and 0 when is OFF, based on the on_power_threshold parameter; weak annotations are set to 1 when at least one time appliance is activate inside the window. 
+Quantity of strong and weak annotations to be used in the experiments can be defined in the experiment modules. In fact, in ukdale_experiment_1_2 and mixed_training_experiment can be set:
 
 - quantity of data previously generated from UKDALE house 1
 - quantity of data previously generated from UKDALE house 2
@@ -27,7 +28,8 @@ Data will be created with both types of label. Quantity of strong and weak annot
 - path to synthetic data for Aggregate Normalized Error computation
 - flag to perform train or inference. If train is selected also the prediction on the test set and metrics estimation will be performed while if inference is chosen weights of a trained model will be loaded from the path to perform the inference.  
 
-Specifically, for mixed training experiment there is the possibility to set also the testing dataset desired, choosing between REFIT and UK-DALE. 
+To perform the mixed experiment, in the proposed work REFIT was resample from 8s to 6s period. Specifically, refit_resampling.py can be used for this purpose. 
+For mixed training experiment there is the possibility to set also the testing dataset desired, choosing between REFIT and UK-DALE.
 
 Required packages to prepare the enviroment are listed in environment.yml file.
 
