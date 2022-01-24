@@ -8,10 +8,10 @@ Two experiments are proposed:
 - one based on UK-DALE data where it is possible to vary the percentage of bags with strong annotations as well as weak annotations
 - one based on mixed dataset where the network can be trained with a percentage of strong annotations from UK-DALE and a quantity of weak annotations from REFIT, testing on both datasets the performance of the network. 
 
-In dataset_creation.py code for synthetic aggregates creation is available for both UK-DALE and REFIT. Modules noise_extraction.py and noised_aggregate_creation.py have to be used to create noised aggregate vectors, adding noise to synthetic vectors.
+In dataset_creation folder code for synthetic aggregates creation is available for both UK-DALE and REFIT. Modules noise_extraction.py and noised_aggregate_creation.py have to be used to create noised aggregate vectors, adding noise to synthetic vectors.
 Appliances taken into consideration are kettle, microwave, fridge, washing machine and dishwasher.
 
-Data will be created with both types of label. Appliance states are set to 1 in strong annotations when the specific appliance is ON and 0 when is OFF, based on the on_power_threshold parameter; weak annotations are set to 1 when at least one time appliance is activate inside the window. 
+Data will be created with both types of label. Appliance states are set to 1 in strong annotations when the specific appliance is ON and 0 when is OFF, based on the on_power_threshold parameter; weak annotations are set to 1 when at least one time appliance is active inside the window. 
 Quantity of strong and weak annotations to be used in the experiments can be defined in the experiment modules. In fact, in ukdale_experiment_1_2 and mixed_training_experiment can be set:
 
 - quantity of data previously generated from UKDALE house 1
