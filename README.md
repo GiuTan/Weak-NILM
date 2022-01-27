@@ -25,7 +25,7 @@ Quantity of strong and weak annotations to be used in the experiments can be def
 - clip smoothing post-processing. This flag refers only to fully supervised + weak supervised experiment 
 - the use of weakly labeled dataset
 - type of experiment to be performed (fully supervised or fully supervised + weak supervised) 
-- path to synthetic data for Aggregate Normalized Error computation
+- path to synthetic data for ANE computation
 - flag to perform train or inference. If train is selected also the prediction on the test set and metrics estimation will be performed while if inference is chosen weights of a trained model will be loaded from the path to perform the inference.  
 
 To perform the mixed experiment, in the proposed work REFIT was resample from 8s to 6s period. Specifically, refit_resampling.py can be used for this purpose. 
