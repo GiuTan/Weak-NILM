@@ -1,7 +1,6 @@
 # Weak-NILM
-This repository contains source code to perform multi-label classification using a deep learning approach trained with weakly labeled data. This work refers to a paper submitted to Transactions on Smart Grid and currently under revision. 
-
-The implemented network is a CRNN, for which the architecture refers to [].
+This repository contains source code to perform multi-label classification using a deep learning approach trained with weakly labeled data. This work refers to [Multilabel Appliance Classification With Weakly Labeled Data for Non-Intrusive Load Monitoring](https://ieeexplore.ieee.org/document/9831435).
+The implemented network is a Convolutional Recurrent Neural Network. 
 Both strongly and weakly labeled data are generated from two real-world benchmark datasets: REFIT and UK-DALE.
 
 Two experiments are proposed:
